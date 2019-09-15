@@ -59,7 +59,5 @@ def action_wrapper(hermes, intentMessage, conf):
 
 if __name__ == "__main__":
     mqtt_opts = MqttOptions()
-    with Hermes(mqtt_options=mqtt_opts) as h:
-#    with Hermes("localhost:1883") as h:
-        h.subscribe_intent("YuMi_control:Hallo", subscribe_intent_callback) \
-         .start()
+    with Hermes("localhost:1883") as h:
+        h.subscribe_intent("Jack_Frost:Hallo", subscribe_intent_callback).start()
